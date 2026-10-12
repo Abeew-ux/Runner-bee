@@ -144,7 +144,7 @@ if(st==7){const b2=W*.3;L.push({x:W*.15,y:H*.44,w:b2,h:bh,t:'-',a:()=>{sens=Math
 if(st==8)L.push({x:bx,y:H*.88,w:bw,h:bh,t:'RETOUR',a:()=>{st=3}});
 return L}
 function ui(){g.textAlign='center';
-if(st==3){const bob=Math.sin(T*2)*H*.008;g.font='900 '+W*.2+'px Helvetica,Arial,sans-serif';g.shadowBlur=30;g.shadowColor='#27f5ff';g.fillStyle='#27f5ff';g.fillText('NEON',W/2,H*.3+bob);g.shadowColor='#ff4fd8';g.fillStyle='#ff4fd8';g.fillText('RUNNER',W/2,H*.3+W*.2+bob);g.shadowBlur=0;txt('🏆 Meilleur score : '+best,Math.max(40,H*.06)+W*.17,W*.055,'#ffd23f')}
+if(st==3){const bob=Math.sin(T*2)*H*.008;g.font='900 '+W*.2+'px Helvetica,Arial,sans-serif';g.shadowBlur=30;g.shadowColor='#27f5ff';g.fillStyle='#27f5ff';g.fillText('NEON',W/2,H*.3+bob);g.shadowColor='#ff4fd8';g.fillStyle='#ff4fd8';g.fillText('RUNNER',W/2,H*.3+W*.2+bob);g.shadowBlur=0;txt('🏆 Meilleur score : '+best,Math.max(40,H*.06)+W*.17,W*.055,'#ffd23f');txt('v12',H*.99,W*.03,'#888')}
 if(st==2&&mp)rankUI();if(0){const fin=!ok()||opp.f,os=opp?opp.s:0;txt(fin?(score>os?'VICTOIRE !':score<os?'DÉFAITE':'ÉGALITÉ'):'Perdu !',H*.38,W*.12,'#fff');txt('Toi : '+score+'  |  Adversaire : '+os,H*.46,W*.05,'#bbb');if(!fin)txt('Ton adversaire joue encore...',H*.55,W*.05,'#ffd23f');else if(!mp.host)txt('Attends la revanche...',H*.57,W*.045,'#bbb')}if(st==2&&!mp){txt('Perdu !',H*.4,W*.12,'#fff');txt('Meilleur score : '+best,H*.47,W*.055,'#bbb');if(!nick&&sbc())txt('Ajoute un pseudo (Réglages) pour le classement',H*.53,W*.038,'#ffd23f')}
 if(st==4)txt('Choisis ta boule',H*.15,W*.085,'#fff');
 ni.style.display=st==7?'block':'none';ni.style.top=H*.24+'px';ci.style.display=st==5&&!mp?'block':'none';ci.style.top=H*.4+'px';
